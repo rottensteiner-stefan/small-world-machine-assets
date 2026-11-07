@@ -8,16 +8,23 @@ Implemented in accordance with **ADR 0011: Modulare Asset-Kits & Out-of-Tree-Ass
 
 ```text
 small-world-machine-assets/
-├── characters/
-│   ├── dino/            # Tripo3D + Mixamo player character for the 2.5D platformer showcase (concept, base mesh, Mixamo package)
-│   └── spacegirl/       # Tripo3D mannequin (GLB, Blender scene, PBR textures, concept sheet)
-├── animations/          # planned: shared locomotion and mocap pools (not yet migrated)
-└── kits/                # planned: modular environment kits (not yet migrated)
+├── characters/          # planned: runtime-ready rigged characters (character.glb + metadata)
+├── animations/          # planned: shared locomotion and mocap pools (GLB)
+└── kits/                # planned: modular environment kits (GLB/WebP + meta.json)
 ```
+
+## Runtime assets only
+
+Per engine **ADR 0058 (Originals stay out of git)** this repository holds only runtime-ready assets
+and their provenance notes. Originals and intermediates (`raw/`, Tripo `tripo-out/`, `.blend`, `.fbx`,
+Mixamo packages, concept/turnaround inputs, unmodified third-party downloads) are kept outside git in
+the maintainer's Google Drive (`Small-World-Machine/small-world-machine-assets/…`, with a sha256
+`MANIFEST.txt`). The former `characters/dino/` and `characters/spacegirl/` sources moved there on
+2026-11-07.
 
 ## Git LFS Requirement
 
-This repository uses [Git Large File Storage (LFS)](https://git-lfs.github.com/) to track binary files (`.glb`, `.blend`, `.fbx`, `.png`, etc.).
+This repository uses [Git Large File Storage (LFS)](https://git-lfs.github.com/) to track binary files (`.glb`, `.png`, `.webp`, etc.).
 
 Ensure Git LFS is installed and initialised before cloning:
 
@@ -28,4 +35,4 @@ git clone https://github.com/rottensteiner-stefan/small-world-machine-assets.git
 
 ## Licenses
 
-- Individual asset licenses are documented in their respective subdirectories (e.g. `characters/<name>/license.txt`, where third-party).
+- Every asset documents source, author, license and derivation in its subdirectory (`license.txt` / `README.md`) or in the consuming repo's `REFERENCES.md`.
