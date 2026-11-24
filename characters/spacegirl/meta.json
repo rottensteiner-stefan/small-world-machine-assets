@@ -1,0 +1,24 @@
+{
+  "$schema": "https://small-world-machine.dev/schemas/prop-meta.schema.json",
+  "id": "characters/spacegirl",
+  "name": "SpaceGirl (Mixamo Rig)",
+  "category": "characters",
+  "kit": "characters",
+  "version": "2.0.0",
+  "description": "Stylized female character mannequin built from consistent Seedream v5 3-views via Tripo3D v3.1 + Mixamo v3.0 (52 joints, +Z-facing, 1.000 m, 2048px WebP PBR, OPAQUE).",
+  "triangles": 22729,
+  "materials": 1,
+  "textures": [
+    "diffuse",
+    "roughness_metallic",
+    "normal"
+  ],
+  "dimensions": {
+    "width": 0.599,
+    "height": 1.0,
+    "depth": 0.266
+  },
+  "recommendedScale": 1.0,
+  "author": "Stefan Rottensteiner",
+  "license": "Proprietary"
+}
