@@ -1,13 +1,13 @@
 # SpaceGirl (`character.glb`)
 
-Stylized female character mannequin, rebuilt from Seedream v5 3-views and normalized/rigged for Small World Machine.
+Stylized female character mannequin, normalized to the canonical Small World Machine Mixamo rig.
 
 ## Specs
 
 - **Geometry:** `14,830` vertices / `22,729` triangles (single continuous mesh, smooth welded vertex normals)
-- **Skeleton:** `52` joints (`mixamorig:*`, pruned unused end-tip bones to fit within the `64`-bone GPU uniform budget)
-- **Transform & Scale:** `1.000 m` height, feet at `Y = 0`, horizontally centered, facing `+Z` (`RootNode` scale `1.0`)
-- **Materials & Textures:** `1` PBR material (`alphaMode = OPAQUE`, `doubleSided = false`) with `2048x2048` WebP (`EXT_texture_webp`) BaseColor, ORM, and Tangent-Space Normal maps (`1.55 MB` GLB)
-- **Polish Pass:** Volume-preserving Taubin surface smoothing on chest/shirt hemfolds, continuous welded normals, ponytail `Head`-lock & cross-leg weight cleanup, strict eye-socket protection, achromatic forehead/bang edge-halo cleanup (`chroma2 < 0.18 & ~warm_skin_px`), crisp `"25"` chest projection (`|x| <= 0.088`, sleeves excluded), and matte skin/garment `ORM` roughness calibration.
-- **Provenance:** Generated from consistent Seedream v5 3-view references (`front`, `side`, `back`; refined upper-torso proportions and slightly longer shorts) via Tripo3D `v3.1-20260211` multiview-to-model (`geometry_quality=detailed`, `texture_quality=detailed`, `pbr=true`), auto-rigged with Tripo `v3.0-20260909` (`--spec mixamo`), and aligned to Adobe Mixamo local bone coordinate frames + polished in Blender 5.3. Sources archived externally per engine ADR 0058.
+- **Skeleton:** `36` unified joints (`mixamorig:*` core hierarchy + `HandFingers`/`HandThumb` + `LeftHandMiddle1`/`RightHandMiddle1` palm grip sockets + `Ponytail1..3`, `<= 64`-bone GPU uniform budget, `0.0000°` canonical Mixamo rest-frame alignment)
+- **Transform & Scale:** `1.600 m` height (`1.016 × 1.600 × 0.413 m`), flat soles grounded at `Y = 0`, horizontally centered, facing `+Z` (`RootNode` scale `1.0`)
+- **Materials & Textures:** `1` PBR material (`alphaMode = OPAQUE`, `doubleSided = false`) with `2048×2048` WebP (`EXT_texture_webp`) BaseColor, ORM, and Tangent-Space Normal maps (`1.43 MB` GLB)
+- **Polish Pass:** Pure-white eyeball sclera, softened/rounded lower chin contour, volume-preserving Taubin surface smoothing on shirt hemfolds, continuous welded normals, dynamic 3-bone ponytail chain & cross-leg weight cleanup, crisp `"25"` chest projection, and matte skin/garment `ORM` roughness calibration.
+- **Provenance:** Generated from consistent Seedream v5 3-view references (`front`, `side`, `back`) via Tripo3D `v3.1-20260211` multiview-to-model + Mixamo `v3.0-20260909`, unified and polished in Blender 5.3. Raw generation inputs archived externally per engine ADR 0058.
 - **License:** Project-owned original character asset (Stefan Rottensteiner).
